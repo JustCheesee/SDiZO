@@ -11,9 +11,7 @@ DynamicArray::DynamicArray(int s) {
     this -> size = s;
 }
 
-DynamicArray::~DynamicArray() {
-    delete [] array;
-}
+DynamicArray::~DynamicArray() = default;
 
 void DynamicArray::addBeginning(int number) {
     int* new_array = new int[size + 1];
@@ -38,7 +36,7 @@ void DynamicArray::addEnd(int number) {
 }
 
 void DynamicArray::addDesired(int number, int position) {
-    if(position <= size){
+    if(position <= size && position >= 0){
         int* new_array = new int[size + 1];
         for(int i = 0; i < size; i++){
             if (i < position) new_array[i] = array[i];
@@ -52,6 +50,7 @@ void DynamicArray::addDesired(int number, int position) {
 }
 
 void DynamicArray::deleteBeginning() {
+    if(size == 0) return;
     int* new_array = new int[size - 1];
     for(int i = 0; i < size - 1; i++){
         new_array[i] = array[i + 1];
@@ -62,6 +61,7 @@ void DynamicArray::deleteBeginning() {
 }
 
 void DynamicArray::deleteEnd() {
+    if(size == 0) return;
     int* new_array = new int[size - 1];
     for(int i = 0; i < size - 1; i++){
         new_array[i] = array[i];
@@ -72,7 +72,7 @@ void DynamicArray::deleteEnd() {
 }
 
 void DynamicArray::deleteDesired(int position) {
-    if(position <= size){
+    if(position <= size && size != 0 && position >= 0){
         int* new_array = new int[size - 1];
         for(int i = 0; i < size - 1; i++){
             if (i < position) new_array[i] = array[i];
@@ -93,7 +93,7 @@ int DynamicArray::search(int number) {
 
 void DynamicArray::printArray() {
     for(int i = 0; i < size; i++){
-        cout << array[i];
+        cout << array[i] << "|";
     }
     cout << "\nSize of Array: " << size;
 }
