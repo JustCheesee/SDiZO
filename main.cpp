@@ -27,8 +27,8 @@ int main(){
 //    int position = a1.search(6);
 //    cout << position;
 //    a1.printArray();
-
-    DoublyLinkedList d1;
+//
+//    DoublyLinkedList d1;
 //    d1.addBeginning(2);
 //    d1.addBeginning(3);
 //    d1.addEnd(4);
@@ -36,8 +36,12 @@ int main(){
 //    d1.addBeginning(6);
 //    d1.addDesired(7, 0);
 //    d1.addBeginning(8);
-    d1.addDesired(9, 0);
-    d1.printList();
+//    d1.deleteBeginning();
+//    d1.deleteEnd();
+//    d1.deleteDesired(0);
+//    Node* x = d1.search(6);
+//    cout << x -> value;
+//    d1.printList();
 
     return 0;
 }

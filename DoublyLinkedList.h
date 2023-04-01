@@ -19,7 +19,7 @@ class DoublyLinkedList{
         void deleteBeginning();
         void deleteEnd();
         void deleteDesired(int);
-        int search(int);
+        Node* search(int);
         void printList();
         DoublyLinkedList();
         ~DoublyLinkedList();

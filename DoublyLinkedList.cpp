@@ -6,9 +6,9 @@
 #include "Node.h"
 
 DoublyLinkedList::DoublyLinkedList() {
-    head = nullptr;
-    tail = nullptr;
-    size = 0;
+    this -> head = nullptr;
+    this -> tail = nullptr;
+    this -> size = 0;
 }
 
 DoublyLinkedList::~DoublyLinkedList() = default;
@@ -64,7 +64,55 @@ void DoublyLinkedList::addDesired(int value, int position) {
 }
 
 void DoublyLinkedList::deleteBeginning() {
+    if(size == 0) return;
+    if(head == tail){
+        delete head;
+        head = nullptr;
+        tail = nullptr;
+    }else{
+        head = head -> next;
+        delete head -> prev;
+        head -> prev = nullptr;
+    }
+    size--;
+}
 
+void DoublyLinkedList::deleteEnd() {
+    if(size == 0) return;
+    if(head == tail){
+        delete tail;
+        head = nullptr;
+        tail = nullptr;
+    }else{
+        tail = tail -> prev;
+        delete tail -> next;
+        tail -> next = nullptr;
+    }
+    size--;
+}
+
+void DoublyLinkedList::deleteDesired(int position) {
+    if(position < size && position >= 0){
+        Node* searching = head;
+        for(int i = 0; i < position; i++){
+            searching = searching -> next;
+        }
+        if(searching -> prev != nullptr) searching -> prev -> next = searching -> next;
+        else head = searching -> next;
+        if(searching -> next != nullptr) searching -> next -> prev = searching -> prev;
+        else tail = searching -> prev;
+        delete searching;
+        size--;
+    }
+}
+
+Node* DoublyLinkedList::search(int number) {
+    Node* searching = head;
+    for(int i = 0; i < size; i++){
+        if(searching -> value == number) return searching;
+        searching = searching -> next;
+    }
+    return nullptr;
 }
 
 void DoublyLinkedList::printList() {
