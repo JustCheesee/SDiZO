@@ -7,6 +7,8 @@
 #include "DoublyLinkedList.h"
 #include "DoublyLinkedList.cpp"
 #include "Node.cpp"
+#include "MaxHeap.h"
+#include "MaxHeap.cpp"
 
 using namespace std;
 
@@ -42,6 +44,12 @@ int main(){
 //    Node* x = d1.search(6);
 //    cout << x -> value;
 //    d1.printList();
+
+    MaxHeap h1;
+    for(int i = 0; i < 20; i++){
+        h1.addElement(i);
+    }
+    h1.printHeap();
 
     return 0;
 }
