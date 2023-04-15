@@ -1,7 +1,3 @@
-//
-// Created by daniel on 01.04.23.
-//
-
 #ifndef SDIZO_DOUBLYLINKEDLIST_H
 #define SDIZO_DOUBLYLINKEDLIST_H
 #include "Node.h"

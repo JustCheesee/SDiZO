@@ -1,7 +1,3 @@
-//
-// Created by daniel on 02.04.23.
-//
-
 #ifndef SDIZO_MAXHEAP_H
 #define SDIZO_MAXHEAP_H
 
@@ -18,7 +14,7 @@ class MaxHeap{
         int getParent(int);
         int getLeft(int);
         int getRight(int);
-        void printHeap();
+        void printHeap(int, string , bool);
         MaxHeap();
         ~MaxHeap();
 };

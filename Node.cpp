@@ -1,7 +1,3 @@
-//
-// Created by daniel on 01.04.23.
-//
-
 #include "Node.h"
 
 Node::Node(){

@@ -1,7 +1,3 @@
-//
-// Created by Daniel Gaida on 31.03.23.
-//
-
 #include "DynamicArray.h"
 #include <iostream>
 using namespace std;
@@ -13,7 +9,7 @@ DynamicArray::DynamicArray(int s) {
 
 DynamicArray::~DynamicArray() = default;
 
-void DynamicArray::addBeginning(int number) {
+void DynamicArray::addBeginning(int number) { //adds number at beginning of array
     int* new_array = new int[size + 1];
     for(int i = 0; i < size; i++){
         new_array[i + 1] = array[i];
@@ -24,7 +20,7 @@ void DynamicArray::addBeginning(int number) {
     size++;
 }
 
-void DynamicArray::addEnd(int number) {
+void DynamicArray::addEnd(int number) {     //adds number at end of array
     int* new_array = new int[size + 1];
     for(int i = 0; i < size; i++){
         new_array[i] = array[i];
@@ -35,7 +31,7 @@ void DynamicArray::addEnd(int number) {
     size++;
 }
 
-void DynamicArray::addDesired(int number, int position) {
+void DynamicArray::addDesired(int number, int position) {   //adds number at desired position in array
     if(position <= size && position >= 0){
         int* new_array = new int[size + 1];
         for(int i = 0; i < size; i++){
@@ -49,7 +45,7 @@ void DynamicArray::addDesired(int number, int position) {
     }
 }
 
-void DynamicArray::deleteBeginning() {
+void DynamicArray::deleteBeginning() {  //deletes number at beginning of array
     if(size == 0) return;
     int* new_array = new int[size - 1];
     for(int i = 0; i < size - 1; i++){
@@ -60,7 +56,7 @@ void DynamicArray::deleteBeginning() {
     size--;
 }
 
-void DynamicArray::deleteEnd() {
+void DynamicArray::deleteEnd() {    //deletes number at end of array
     if(size == 0) return;
     int* new_array = new int[size - 1];
     for(int i = 0; i < size - 1; i++){
@@ -71,7 +67,7 @@ void DynamicArray::deleteEnd() {
     size--;
 }
 
-void DynamicArray::deleteDesired(int position) {
+void DynamicArray::deleteDesired(int position) {    //deletes number at desired position in array
     if(position <= size && size != 0 && position >= 0){
         int* new_array = new int[size - 1];
         for(int i = 0; i < size - 1; i++){
@@ -84,14 +80,14 @@ void DynamicArray::deleteDesired(int position) {
     }
 }
 
-int DynamicArray::search(int number) {
+int DynamicArray::search(int number) {  //searches array for given number and returns its position if it exists
     for(int i = 0; i < size; i++){
         if(array[i] == number) return i;
     }
     return -1;
 }
 
-void DynamicArray::printArray() {
+void DynamicArray::printArray() {       //prints array in console
     for(int i = 0; i < size; i++){
         cout << array[i] << "|";
     }

@@ -1,7 +1,3 @@
-//
-// Created by Daniel Gaida on 31.03.23.
-//
-
 #ifndef SDIZO_DYNAMICARRAY_H
 #define SDIZO_DYNAMICARRAY_H
 
