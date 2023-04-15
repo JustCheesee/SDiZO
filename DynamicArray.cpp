@@ -2,9 +2,9 @@
 #include <iostream>
 using namespace std;
 
-DynamicArray::DynamicArray(int s) {
-    this -> array = new int[s];
-    this -> size = s;
+DynamicArray::DynamicArray() {
+    this -> array = new int[0];
+    this -> size = 0;
 }
 
 DynamicArray::~DynamicArray() = default;

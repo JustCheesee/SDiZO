@@ -90,9 +90,11 @@ void DoublyLinkedList::deleteEnd() {   //deletes value at end of list
 void DoublyLinkedList::deleteDesired(int value) {    //deletes desired value from list if value exists
     Node* searching = head;
     for(int i = 0; i < size; i++){
-        searching = searching -> next;
+        if(searching == nullptr) return;
         if(searching -> value == value) break;
+        searching = searching -> next;
     }
+    if(searching == nullptr) return;
     if(searching -> prev != nullptr) searching -> prev -> next = searching -> next;
     else head = searching -> next;                                                  //edge case if given value is head of list
     if(searching -> next != nullptr) searching -> next -> prev = searching -> prev;

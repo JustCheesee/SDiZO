@@ -15,7 +15,7 @@ class DynamicArray{
         void deleteDesired(int);
         int search(int);
         void printArray();
-        explicit DynamicArray(int);
+        DynamicArray();
         ~DynamicArray();
 };
 
