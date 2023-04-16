@@ -56,6 +56,7 @@ void MaxHeap::removeElement(int value) { //removes element from heap at given po
 }
 
 void MaxHeap::heapify(int i) {      //heapify function to restore heap
+    cout <<"________";
     int left = getLeft(i);
     int right = getRight(i);
     int largest;

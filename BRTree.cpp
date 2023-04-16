@@ -127,10 +127,11 @@ void BRTree::BRremove(BRNode* node) {
     if(y != node)node -> key = y -> key;                               //case if y and node are not same pointer
     if(y -> color == true) BRfixup(x);
     delete y;
-    if(x == watcher){                                                  //deleting watcher pointers because project works on nullptr
+    if(x == watcher && x != root){                                                  //deleting watcher pointers because project works on nullptr
         if(watcher -> parent -> right == x) watcher -> parent -> right = nullptr;
         if(watcher -> parent -> left == x) watcher -> parent -> left = nullptr;
     }
+    if(x == watcher && x == root)root = nullptr;
 }
 
 void BRTree::BRfixup(BRNode* node) {
