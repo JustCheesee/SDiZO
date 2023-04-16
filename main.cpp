@@ -47,7 +47,8 @@ int main(){
                     cout << "4. Usuniecie z poczatku tablicy \n";
                     cout << "5. Usuniecie z konca tablicy \n";
                     cout << "6. Usuniecie z dowolnego miejsca tablicy \n";
-                    cout << "7. Wroc \n";
+                    cout << "7. Wyszukanie elementu \n";
+                    cout << "8. Wroc \n";
                     cin >> chosen;
                     system("cls");
                     switch(chosen){
@@ -80,7 +81,16 @@ int main(){
                             cin >> chosen;
                             x.deleteDesired(chosen);
                             break;
-                        case 7:
+                        case 7:{
+                            cout << "Podaj wartosc: \n";
+                            cin >> chosen;
+                            int searched = x.search(chosen);
+                            cout <<"Wyszukana pozycja elementu: \n" << searched;
+                            cout <<"\n Wpisz cokolwiek aby wrocic: \n";
+                            cin >> chosen;
+                        }
+                        break;
+                        case 8:
                             isChosen = false;
                     }
                 }
@@ -107,7 +117,8 @@ int main(){
                     cout << "4. Usuniecie z poczatku listy \n";
                     cout << "5. Usuniecie z konca listy \n";
                     cout << "6. Usuniecie danego elementu z listy \n";
-                    cout << "7. Wroc \n";
+                    cout << "7. Wyszukanie elementu \n";
+                    cout << "8. Wroc \n";
                     cin >> chosen;
                     system("cls");
                     switch (chosen) {
@@ -140,7 +151,16 @@ int main(){
                             cin >> chosen;
                             x.deleteDesired(chosen);
                             break;
-                        case 7:
+                        case 7:{
+                            cout << "Podaj wartosc: \n";
+                            cin >> chosen;
+                            Node* searched = x.search(chosen);
+                            cout <<"Wyszukany element: \n" << searched -> value;
+                            cout <<"\n Wpisz cokolwiek aby wrocic: \n";
+                            cin >> chosen;
+                        }
+                        break;
+                        case 8:
                             isChosen = false;
                     }
                 }

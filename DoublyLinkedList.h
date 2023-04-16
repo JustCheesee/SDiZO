@@ -6,9 +6,9 @@ class DoublyLinkedList{
     private:
         Node* head;
         Node* tail;
-        int size;
 
     public:
+        int size;
         void addBeginning(int);
         void addEnd(int);
         void addDesired(int, int);

@@ -4,9 +4,9 @@
 class DynamicArray{
     private:
         int* array;
-        int size;
 
     public:
+        int size;
         void addBeginning(int);
         void addEnd(int);
         void addDesired(int, int);
