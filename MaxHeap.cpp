@@ -38,7 +38,7 @@ void MaxHeap::addElement(int value) {   //adds element to heap
     size++;
 }
 
-void MaxHeap::removeElement(int value) { //removes element from heap at given position
+void MaxHeap::removeElement(int value) { //removes element from heap with given value
     int position = searchElement(value);
     if(position < size && position >= 0){
         int * new_heap = new int[size - 1];
@@ -56,7 +56,6 @@ void MaxHeap::removeElement(int value) { //removes element from heap at given po
 }
 
 void MaxHeap::heapify(int i) {      //heapify function to restore heap
-    cout <<"________";
     int left = getLeft(i);
     int right = getRight(i);
     int largest;
