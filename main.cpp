@@ -155,7 +155,7 @@ int main(){
                             cout << "Podaj wartosc: \n";
                             cin >> chosen;
                             Node* searched = x.search(chosen);
-                            cout <<"Wyszukany element: \n" << searched -> value;
+                            if(searched != nullptr)cout <<"Wyszukany element: \n" << searched -> value;
                             cout <<"\n Wpisz cokolwiek aby wrocic: \n";
                             cin >> chosen;
                         }
