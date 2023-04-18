@@ -156,6 +156,7 @@ int main(){
                             cin >> chosen;
                             Node* searched = x.search(chosen);
                             if(searched != nullptr)cout <<"Wyszukany element: \n" << searched -> value;
+                            else cout << "Brak elementu";
                             cout <<"\n Wpisz cokolwiek aby wrocic: \n";
                             cin >> chosen;
                         }
@@ -259,6 +260,7 @@ int main(){
                             cin >> chosen;
                             BRNode* searched = x.BRsearch(x.root, chosen);
                             if(searched != nullptr)cout <<"Wyszukany element to: \n" << searched -> key;
+                            else cout << "Brak elementu";
                             cout <<"\n Wpisz cokolwiek aby wrocic: \n";
                             cin >> chosen;
                         }
